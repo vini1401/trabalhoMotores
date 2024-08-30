@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed;
+    public float JumpForce;
+
     private Rigidbody2D rig;
 
     // Start is called before the first frame update
@@ -17,7 +19,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
+        jump();
     }
 
     void Move()
