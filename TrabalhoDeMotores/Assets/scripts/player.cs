@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
 public class player : MonoBehaviour
 {
     public float Speed;
@@ -37,19 +33,19 @@ public class player : MonoBehaviour
 
         if(Input.GetAxis("Horizontal") > 0f)
         {
-            anim.SetBool("walk", true);
+            anim.SetBool("wal", true);
             transform.eulerAngles = new Vector3(0f,0f,0f);
         }
 
         if(Input.GetAxis("Horizontal") < 0f)
         {
-            anim.SetBool("walk", true);
+            anim.SetBool("wal", true);
             transform.eulerAngles = new Vector3(0f,180f,0f);
         }
 
         if(Input.GetAxis("Horizontal") == 0f)
         {
-            anim.SetBool("walk", false);
+            anim.SetBool("wal", false);
         }
     }
 
@@ -82,11 +78,11 @@ public class player : MonoBehaviour
             anim.SetBool("jump", false);
         }
 
-        if (collision.gameObject.tag == "Spike")
-        {
-            GameController.instance.ShowGameOver();
-            Destroy(gameObject);
-        }
+        // if (collision.gameObject.tag == "Spike")
+        // {
+        //     GameController.instance.ShowGameOver();
+        //     Destroy(gameObject);
+        // }
     }
 
     void OnCollisionExit2D(Collision2D collision)

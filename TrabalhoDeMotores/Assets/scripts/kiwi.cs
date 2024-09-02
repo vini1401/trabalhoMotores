@@ -23,8 +23,8 @@ public class kiwi : MonoBehaviour
             circle.enabled = false;
             collected.SetActive(true);
 
-            GameController.instance.totalScore += Score;
-            GameController.instance.UpdateScoreText();
+            //GameController.instance.totalScore += Score;
+            //GameController.instance.UpdateScoreText();
 
             Destroy(gameObject, 0.25f);
         }
